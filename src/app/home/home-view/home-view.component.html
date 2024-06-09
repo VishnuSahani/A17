@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div class="side-bar" [ngClass]="{'hideSideBar' : !isSideBarOpen}">
+        <div>
+            <ul type="none">
+                <li>
+                    Home
+                </li>
+                <li>Home123</li>
+                <li>Home123</li>
+                <li>Home123</li>
+                <li>Home123</li>
+            </ul>
+        </div>
+    </div>
+    <div class="body-container">
+        <nav>
+            <ul>
+                <li (click)="sideBarControl()">!!!</li>
+                <li>Home</li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;">
+            @for (item of cardList; track $index) {
+                <div style="padding: 10px; margin: 5px;background: red;height: 200px;width:20%">
+                    {{item | json}} 123
+                </div>
+            }
+        </div>
+    </div>
+</div>
